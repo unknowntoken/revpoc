@@ -1,6 +1,5 @@
 package com.rev.models.echo;
 
-import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 
 public class EchoResponseModel {
@@ -18,5 +17,12 @@ public class EchoResponseModel {
 
     public void setYourString(String yourString) {
         this.yourString = yourString;
+    }
+
+    @Override
+    public String toString() {
+        return "EchoResponseModel{" +
+                "yourString='" + yourString + '\'' +
+                '}';
     }
 }

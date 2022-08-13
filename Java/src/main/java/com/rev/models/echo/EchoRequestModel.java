@@ -10,6 +10,7 @@ public class EchoRequestModel {
     public EchoRequestModel(String myString) {
         this.myString = myString;
     }
+
     public void setMyString(String myString) {
         this.myString = myString;
     }
@@ -18,5 +19,10 @@ public class EchoRequestModel {
         return myString;
     }
 
-
+    @Override
+    public String toString() {
+        return "EchoRequestModel{" +
+                "myString='" + myString + '\'' +
+                '}';
+    }
 }

@@ -1,13 +1,11 @@
 package com.rev.models;
 
-import spark.Response;
-
 public class ApiResponse {
     private ResponseStatus status;
     private String message;
     private Object data;
 
-    public ApiResponse( ResponseStatus status, String message, Object data) {
+    public ApiResponse(ResponseStatus status, String message, Object data) {
         this.status = status;
         this.message = message;
         this.data = data;

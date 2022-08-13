@@ -1,7 +1,7 @@
 import spock.lang.Shared
 import spock.lang.Specification
 
-class HelloSpec extends Specification {
+public class HelloServiceSpec extends Specification {
 
 /*    @Shared
     def client = new RESTClient("localhost:7654")

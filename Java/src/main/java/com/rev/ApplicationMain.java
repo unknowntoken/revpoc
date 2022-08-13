@@ -4,8 +4,6 @@ import com.rev.models.JsonTransformer;
 import com.rev.routes.EchoRoute;
 import com.rev.routes.HelloRoute;
 
-import java.io.InputStream;
-
 import static spark.Spark.get;
 import static spark.Spark.post;
 
@@ -13,7 +11,6 @@ public class ApplicationMain {
 
 
     public static void main(String[] args) {
-
 
 
         System.out.println("App Start");
