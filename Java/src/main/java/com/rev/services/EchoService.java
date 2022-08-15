@@ -16,7 +16,6 @@ public class EchoService {
         if (echoRequestModel.getMyString().isEmpty()) {
             throw new Exception("Field myString cannot be null or empty");
         }
-
         return echoRequestModel;
     }
 

@@ -6,17 +6,19 @@ import com.rev.models.echo.EchoRequestModel
 import com.rev.models.echo.EchoResponseModel
 import com.rev.services.EchoService
 import spock.lang.Specification
+import spock.lang.Subject
+import spock.lang.Unroll
 
 class EchoServiceSpec extends Specification {
     //Feature under testing
     def echoService = new EchoService();
 
-    def "Method processEchoRequest should return EchoResponseModel when passed a valid EchoResponseModel"() {
+    @Unroll
+    def "Method processEchoRequest should return EchoResponseModel with field your-string: #testStrings"() {
 
         when:
             def result = echoService.processEchoRequest(new EchoRequestModel(testStrings))
         then:
-            println testStrings
             result.getYourString() == testStrings
         where:
             testStrings         ||_
@@ -24,9 +26,11 @@ class EchoServiceSpec extends Specification {
             "Testing process!"  ||_
     }
 
-    def "Method getEchoRequestModelFromReqBody should return valid EchoRequestModel with my-string field " () {
+    @Unroll
+    def "Method getEchoRequestModelFromReqBody should return EchoRequestModel with my-string field: #testStrings " () {
         def input = new EchoRequestModel(testStrings)
         when:
+            @Subject
             def reqModel = echoService.getEchoRequestModelFromReqBody(new Gson().toJson(input))
         then:
             println testStrings

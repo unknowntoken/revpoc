@@ -18,7 +18,7 @@ public class ApplicationMain {
 
         logger.debug("Debug: setting routes");
         //Server server = new Server(new QueuedThreadPool(200, 8, 60));
-        get("/hello", new HelloRoute());
+        get("/hello", new HelloRoute(), new JsonTransformer());
         post("/echo", "application/json", new EchoRoute(), new JsonTransformer());
     }
 
