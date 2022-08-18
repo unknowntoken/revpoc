@@ -1,5 +1,6 @@
 package com.rev.routes;
 
+import com.google.gson.Gson;
 import com.rev.models.ApiResponse;
 import com.rev.models.echo.EchoRequestModel;
 import com.rev.models.echo.EchoResponseModel;
@@ -16,6 +17,8 @@ public class EchoRoute implements Route {
 
     private static final Logger logger = LoggerFactory.getLogger(EchoRoute.class);
     private final EchoService echoService = new EchoService();
+
+    public EchoRoute (){}
 
     @Override
     public Object handle(Request request, Response response) {
@@ -35,14 +38,15 @@ public class EchoRoute implements Route {
 
             response.status(200);
             response.type("application/json");
-            return new ApiResponse(ResponseStatus.Success, "ECHO_SUCCESS", echoResponseModel);
+            ApiResponse echo_success = new ApiResponse(ResponseStatus.Success, "ECHO_SUCCESS", echoResponseModel);
+            return echo_success;
 
         } catch (Exception exception) {
             logger.error("Unable to handle request");
             exception.printStackTrace();
             response.status(400);
             response.type("application/json");
-            return new ApiResponse(ResponseStatus.Failure, "Bad Request", null);
+            return new ApiResponse(ResponseStatus.Failure, "Bad Request", exception.getMessage());
         }
     }
 }

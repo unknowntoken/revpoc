@@ -13,7 +13,7 @@ public class EchoService {
     public EchoRequestModel getEchoRequestModelFromReqBody(String requestBody) throws Exception, JsonSyntaxException {
         EchoRequestModel echoRequestModel = new Gson().fromJson(requestBody, EchoRequestModel.class);
 
-        if (echoRequestModel.getMyString().isEmpty()) {
+        if (echoRequestModel == null || echoRequestModel.getMyString().isEmpty()) {
             throw new Exception("Field myString cannot be null or empty");
         }
         return echoRequestModel;

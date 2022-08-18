@@ -3,7 +3,6 @@ package services
 import com.google.gson.Gson
 import com.google.gson.JsonSyntaxException
 import com.rev.models.echo.EchoRequestModel
-import com.rev.models.echo.EchoResponseModel
 import com.rev.services.EchoService
 import spock.lang.Specification
 import spock.lang.Subject
@@ -52,7 +51,7 @@ class EchoServiceSpec extends Specification {
         when:
             echoService.getEchoRequestModelFromReqBody(null)
         then:
-            thrown NullPointerException
+            thrown Exception
 
     }
 
