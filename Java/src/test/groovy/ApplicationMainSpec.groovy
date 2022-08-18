@@ -1,10 +1,7 @@
 import com.rev.ApplicationMain
-import com.rev.models.JsonTransformer
 import spark.Spark
 import spark.route.HttpMethod
-import spark.routematch.RouteMatch
 import spock.lang.Specification
-import spock.lang.Unroll
 
 class ApplicationMainSpec extends Specification {
 
@@ -27,7 +24,7 @@ class ApplicationMainSpec extends Specification {
                     it.getHttpMethod() == httpMethod
                 }
     }
-    
+
     def "Main should setup routes which matchUri:/echo, acceptType:application/json, httpMethod:post"() {
         given:
         def app = new ApplicationMain()

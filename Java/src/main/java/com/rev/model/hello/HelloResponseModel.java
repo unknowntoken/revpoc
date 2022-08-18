@@ -1,4 +1,4 @@
-package com.rev.models.hello;
+package com.rev.model.hello;
 
 public class HelloResponseModel {
 

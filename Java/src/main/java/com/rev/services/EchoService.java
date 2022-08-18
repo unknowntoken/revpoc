@@ -2,8 +2,8 @@ package com.rev.services;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
-import com.rev.models.echo.EchoRequestModel;
-import com.rev.models.echo.EchoResponseModel;
+import com.rev.model.echo.EchoRequestModel;
+import com.rev.model.echo.EchoResponseModel;
 
 public class EchoService {
 

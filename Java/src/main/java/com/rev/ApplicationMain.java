@@ -1,6 +1,6 @@
 package com.rev;
 
-import com.rev.models.JsonTransformer;
+import com.rev.model.JsonTransformer;
 import com.rev.routes.EchoRoute;
 import com.rev.routes.HelloRoute;
 import org.slf4j.Logger;

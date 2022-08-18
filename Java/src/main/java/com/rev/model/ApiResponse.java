@@ -1,4 +1,4 @@
-package com.rev.models;
+package com.rev.model;
 
 public class ApiResponse {
     private ResponseStatus status;

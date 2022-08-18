@@ -1,9 +1,8 @@
 package com.rev.routes;
 
-import com.google.gson.Gson;
-import com.rev.models.ApiResponse;
-import com.rev.models.echo.EchoRequestModel;
-import com.rev.models.echo.EchoResponseModel;
+import com.rev.model.ApiResponse;
+import com.rev.model.echo.EchoRequestModel;
+import com.rev.model.echo.EchoResponseModel;
 import com.rev.services.EchoService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,7 +10,7 @@ import spark.Request;
 import spark.Response;
 import spark.Route;
 
-import static com.rev.models.ApiResponse.ResponseStatus;
+import static com.rev.model.ApiResponse.ResponseStatus;
 
 public class EchoRoute implements Route {
 

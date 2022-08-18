@@ -1,14 +1,14 @@
 package com.rev.routes;
 
-import com.rev.models.ApiResponse;
-import com.rev.models.hello.HelloResponseModel;
+import com.rev.model.ApiResponse;
+import com.rev.model.hello.HelloResponseModel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import spark.Request;
 import spark.Response;
 import spark.Route;
 
-import static com.rev.models.ApiResponse.ResponseStatus.Success;
+import static com.rev.model.ApiResponse.ResponseStatus.Success;
 
 public class HelloRoute implements Route {
 

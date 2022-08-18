@@ -1,7 +1,7 @@
 package routes
 
 
-import com.rev.models.ApiResponse
+import com.rev.model.ApiResponse
 import com.rev.routes.HelloRoute
 import spark.Request
 import spark.Response

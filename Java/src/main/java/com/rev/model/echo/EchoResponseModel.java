@@ -1,4 +1,4 @@
-package com.rev.models.echo;
+package com.rev.model.echo;
 
 import com.google.gson.annotations.SerializedName;
 

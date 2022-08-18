@@ -1,4 +1,4 @@
-package com.rev.models;
+package com.rev.model;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
